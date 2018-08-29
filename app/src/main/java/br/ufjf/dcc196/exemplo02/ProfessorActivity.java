@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 public class ProfessorActivity extends AppCompatActivity {
+
     private TextView txtProfMensagem;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +17,7 @@ public class ProfessorActivity extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
 
         if(extras != null){
-            String nome = extras.getString("nome");
+            String nome = extras.getString(PESSOA_NOME);
             txtProfMensagem.setText("Olá professor " + nome + "!");
         }
 

@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
+    public static final String PESSOA_NOME = "nome";
     private Button btnProfessor;
     private EditText edtNome;
 
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         btnProfessor.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ProfessorActivity.class);
-                intent.putExtra("nome", edtNome.getText().toString());
+                intent.putExtra(PESSOA_NOME, edtNome.getText().toString());
                 startActivity(intent);
             }
         });
